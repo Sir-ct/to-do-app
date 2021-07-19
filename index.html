@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css/style.css">
+    <link rel="icon" href="./images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="./app.js/main.js"></script>
+    <title>to-do-app</title>
+</head>
+<body>
+    <div id="bodywrap">
+        <div id="hero"><h1>T O D O</h1> <span id="timelogo"></span></div>
+
+        <div id="inputtask">
+            <div class="rounddiv"></div>
+            <form name="todoform" onsubmit="addtask(); return false" method="GET">
+                <input type="text" name="enter" placeholder="Create a new todo..." id="enter">
+            </form>
+        </div>
+
+        <div id="todocontainer">
+            <div id="todolist">
+
+            </div>
+           <!-- <div class="todo"><div class="tickbox"></div><div class="taskname">write a code</div><div class="cancel"></div></div>-->
+            <div id="statusbar">
+                <div id="itemsleft"><span id="dynamicnumber">0</span> items left</div>
+                
+                <div id="clearcompleted">Clear Completed</div>
+            </div>
+        </div>
+        <div id="aac">
+            <div id="all">All</div><div id="active">Active</div><div id="completed">Completed</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var enterval = document.getElementById("enter");
+
+    enterval.addEventListener("click", function(event){
+        event.preventDefault()
+    })
+
+</script>
+</html>
