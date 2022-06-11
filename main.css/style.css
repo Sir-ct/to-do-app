@@ -3,9 +3,10 @@ body{
     padding: 0;
     background-color: hsl(235, 21%, 11%);
     background-image: url("../images/bg-desktop-dark.jpg");
-    background-repeat: no-repeat;
     font-size: 13px;
     font-family: 'Josefin Sans', sans-serif;
+    background-repeat: no-repeat;
+    background-size: 100% 100%
 }
 body.lightmode{
     background-image: url("../images/bg-desktop-light.jpg");
@@ -25,16 +26,22 @@ body.lightmode{
 }
 #hero h1{
     color: white;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 #hero #timelogo{
     width: 25px;
     height: 25px;
     background: url("../images/icon-sun.svg");
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 body.lightmode #hero #timelogo{
     background: url("../images/icon-moon.svg");
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 #inputtask{
     width: 100%;
